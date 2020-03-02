@@ -1,0 +1,15 @@
+%common {
+    background-color: #00e5ff;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+}
+$sizes: 20,50,100;
+// #{$size} => gán thành tên
+@each $size in $sizes {
+    .nav-#{$size}{
+        width: $size *5px;
+        @extend %common
+    }
+}

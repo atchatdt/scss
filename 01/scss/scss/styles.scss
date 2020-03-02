@@ -1,0 +1,13 @@
+.parent {
+  background-color: #999;
+
+  .child1 {
+    color: red;
+    .child-1 {
+      color: yellow;
+    }
+  }
+  .child2 {
+    color: blue;
+  }
+}

@@ -1,0 +1,45 @@
+$font: "arial";
+$bg1: #eee;
+$bg2: #ff99ff;
+$width:200px;
+$height:100px;
+$radius:10px;
+
+%box {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    line-height: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@mixin bgc($bgc) {
+    background-color: $bgc;
+}
+
+@mixin font($align, $size, $family, $weight) {
+
+    font: {
+        size: $size;
+        weight: $weight;
+        family: $family;
+
+    }
+}
+
+.box-1 {
+    @include bgc($bg1);
+    @extend %box;
+    &-text {
+        @include font(center, 1.5rem, $font, bold);
+    }
+}
+
+.box-2 {
+    @extend %box;
+    @include bgc($bg2);
+    &-text {
+        @extend .box-1-text
+    }
+}

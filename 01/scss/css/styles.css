@@ -1,0 +1,14 @@
+.parent {
+  background-color: #999;
+}
+.parent .child1 {
+  color: red;
+}
+.parent .child1 .child-1 {
+  color: yellow;
+}
+.parent .child2 {
+  color: blue;
+}
+
+/*# sourceMappingURL=styles.css.map */

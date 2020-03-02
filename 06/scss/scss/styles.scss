@@ -1,0 +1,46 @@
+$font: "arial";
+$bg1: #eee;
+$bg2: #ff99ff;
+$width:200px;
+$height:100px;
+$radius:10px;
+
+@mixin box($w, $h, $lh, $bg, $cricle:false) {
+    width: $w;
+    height: $h;
+    background-color: $bg;
+    line-height: $lh;
+
+    @if $cricle ==true {
+        border-radius: 50%;
+    }@else{
+        border-radius: $h/10;
+    }
+}
+
+@mixin font($align, $size, $family, $weight) {
+    text-align: $align;
+
+    font: {
+        size: $size;
+        weight: $weight;
+        family: $family;
+
+    }
+}
+
+.box-1 {
+    @include box($width, $height, 100px, $bg2,true);
+    margin-bottom: 10px;
+
+    &-text {
+        @include font(center, 1.5rem, $font, bold);
+    }
+}
+
+.box-2 {
+    @include box($width, $height, 100px, $bg1);
+    &-text {
+        @extend .box-1-text
+    }
+}

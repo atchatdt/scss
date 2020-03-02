@@ -1,0 +1,31 @@
+.box-1 {
+  width: 200px;
+  height: 100px;
+  background-color: #ff99ff;
+  border-radius: 10px;
+  line-height: 100px;
+  margin-bottom: 10px;
+}
+.box-1-text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "arial";
+}
+
+.box-2 {
+  width: 200px;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+.box-2-text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "arial";
+}
+
+/*# sourceMappingURL=styles.css.map */
