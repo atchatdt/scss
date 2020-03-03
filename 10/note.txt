@@ -1,0 +1,5 @@
+Tốt nhất nên tạo ra 2 file css riêng biệt,
+1 file dùng để render scss sang css
+1 file dùng để sửa css trực tiếp => bổ sung 1 số thứ khác
+=> làm vậy để tránh lúc sửa file scss nó render lại mất đi những css vừa chỉnh sửa
+ê mà khoan, scss vẫn bỏ css vào chạy bình thường

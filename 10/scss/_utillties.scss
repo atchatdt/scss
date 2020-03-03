@@ -4,9 +4,25 @@
     margin: 0 auto;
 }
 
-$spaceamounts:(1,2,3,4,5);
+// Trường hợp nếu muốn dùng list
+// @each $space in $spaceamounts
+// $spaceamounts:(1,2,3,4,5);
 
-@each $space in $spaceamounts {
+$trbl:(t:'top',r:'right',b:'bottom',l:'left');
+
+// Có thể lồng các vòng lặp lại với nhau
+ @for $space from 1 to 5 {
+    // Tạo giống kiểu bootstrap(đơn vị rem) => mt-2 => margin-top:2rem
+    @each $key,$value in $trbl {
+        .m#{$key}-#{$space}{
+            margin-#{$value}: #{$space}rem;
+        }
+        .p#{$key}-#{$space}{
+            padding-#{$value}: #{$space}rem;
+        }
+        
+    }
+    // Tạo phiên bản nguyên gốc
     .m-#{$space}{
         margin: #{$space}rem;
     }
@@ -20,3 +36,17 @@ $spaceamounts:(1,2,3,4,5);
         padding: #{$space}rem 0;
     }
 }
+// @each $space in $spaceamounts {
+//     .m-#{$space}{
+//         margin: #{$space}rem;
+//     }
+//     .my-#{$space}{
+//         margin: #{$space}rem 0;
+//     }
+//     .p-#{$space}{
+//         padding: #{$space}rem;
+//     }
+//     .py-#{$space}{
+//         padding: #{$space}rem 0;
+//     }
+// }
