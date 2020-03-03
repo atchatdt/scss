@@ -1,4 +1,3 @@
-@import'./_config';
 %btn{
     display: inline-block;
     border-radius: 5px;
@@ -12,9 +11,10 @@
 
 .btn-primary{
     @extend %btn;
-    background-color: $primary-color;
+    @include set-bg(lighten( $primary-color,10%))
 }
 
 .btn-secondary{
     @extend %btn;
+    @include set-bg($secondary-color);
 }

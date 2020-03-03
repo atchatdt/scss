@@ -1,6 +1,21 @@
+// Nơi khai báo các biến
 $light-color: #f4f4f4;
-$font-stack: Arial,
-Helvetica,
-sans-serif;
+$font-stack: Arial,Helvetica,sans-serif;
 $primary-color: #0e6cff;
 $secondary-color: #ff8700;
+
+// Set text color based on gb
+@function set-text-color($color){
+    @if (lightness($color) > 70) {
+        @return #333;
+    }@else{
+        @return #fff;
+    }
+}
+
+// Set bg & text color
+@mixin set-bg($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
